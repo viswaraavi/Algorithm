@@ -3,7 +3,7 @@
 print sorted(["a","b","ab","aaaaaab"])
 
 #MSD sort
-
+"""
 if (hi <= lo + M)
 { Insertion.sort(a, lo, hi, d); return;
 }
@@ -21,7 +21,7 @@ a[i] = aux[i - lo];
 // Recursively sort for each character value.
 for (int r = 0; r < R; r++)
 sort(a, lo + count[r], lo + count[r+1] - 1, d+1);
-
+"""
 def sort(string,lo,hi):
     count=[0]*258
     aux=[0]*len(string)
