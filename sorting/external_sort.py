@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+""" This N way merge is wrong we need to merge it with N way merge other program"""
 #
 # Sort large text files in a minimum amount of memory
 #
