@@ -246,28 +246,41 @@ Nearest restaurent application of binary search tree
 list2=[]
 def nearest_restaurent(root,l,u):
 
-    if(root.data<l):
+    if(root.data<l and root.r_child):
         nearest_restaurent(root.r_child,l,u)
-    elif(root.data>u):
+    elif(root.data>u and root.l_child):
         nearest_restaurent(root.l_child,l,u)
     else:
-        if(root.l_child and root.l_child.data>=l):
+        if(root.l_child):
             nearest_restaurent(root.l_child,l,u)
 
         if(root.data>l and root.data<u):
             list2.append(root.data)
 
-        if(root.r_child and root.r_child.data<=u):
+        if(root.r_child):
             nearest_restaurent(root.r_child,l,u)
 
 """
 Another application of bst
-
+#This program is assuming that we will be using priority queue
 
 """
 
-def another_application(a=[],b=[],c=[]):
-    pass
+def another_application(array):
+
+    list1=[0]*len(array)
+
+    for iter_list in list1:
+        try:
+            list2.append(iter_list.next())
+        except StopIteration:
+            pass
+
+    print list2
+
+#another_application([[1,2,3],[2,3,4],[3,4,5]])
+
+
 
 
 
@@ -282,7 +295,7 @@ bt.binary_insert(node,bt.Node(200))
 bt.binary_insert(node,bt.Node(150))
 bt.binary_insert(node,bt.Node(250))
 
-nearest_restaurent(node,125,225)
+nearest_restaurent(node,90,175)
 print list2
 
 #root=build_tree([1,2,3,4,5,6])
